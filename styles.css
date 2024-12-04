@@ -482,12 +482,13 @@ margin: auto;
 }
 .commento-root .commento-login .commento-login-text {
   text-align:right;
-  margin-right:16px;
+  margin-left: 657px;
   height:38px;
   color:#E2C9D2;
   font-weight:700;
   cursor:pointer;
-  display:block
+  display:block;
+  width: 40px;
 }
 .commento-root .commento-logged-container {
   width:100%;
@@ -863,7 +864,8 @@ margin: auto;
 .commento-root .commento-card .commento-timeago {
   display:inline;
   color:#E2C9D2;
-  font-size:12px
+  font-size:12px;
+  cursor: default;
 }
 .commento-root .commento-card .commento-score {
   display:none;
