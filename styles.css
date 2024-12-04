@@ -513,7 +513,7 @@ margin: auto;
   position:absolute;
   top:6px;
   left:48px;
-  cursor:pointer
+  cursor:default;
 }
 .commento-root .commento-mod-tools {
   margin-bottom:16px
@@ -830,7 +830,7 @@ margin: auto;
   overflow:hidden;
   text-overflow:ellipsis;
   width:fit-content;
-  cursor:default
+  cursor:default;
 }
 .commento-root .commento-card .commento-flagged::after {
   content:"Flagged";
