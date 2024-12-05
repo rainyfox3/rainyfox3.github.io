@@ -1314,3 +1314,39 @@ height: 160px;
 opacity:0;
 cursor:pointer;
 }
+
+.o5{
+position: absolute;
+top: 446px;
+left: 21px;
+height: 160px;
+opacity:0;
+cursor:pointer;
+}
+
+.o6{
+position: absolute;
+top: 446px;
+left: 216px;
+height: 160px;
+opacity:0;
+cursor:pointer;
+}
+
+.o7{
+position: absolute;
+top: 446px;
+left: 408.5px;
+height: 160px;
+opacity:0;
+cursor:pointer;
+}
+
+.o8{
+position: absolute;
+top: 446px;
+left: 589px;
+height: 160px;
+opacity:0;
+cursor:pointer;
+}
