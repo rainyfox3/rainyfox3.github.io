@@ -15,7 +15,7 @@ window.addEventListener('load', () => {
   });
 });*/
 
-const images = document.querySelectorAll('.o1, .o2, .o3, .o4, .o5');
+const images = document.querySelectorAll('.o1, .o2, .o3, .o4, .o5, .o6');
 
 images.forEach(image => {
   image.addEventListener('click', () => {
