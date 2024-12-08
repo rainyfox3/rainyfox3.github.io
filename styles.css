@@ -1351,4 +1351,39 @@ opacity:0;
 cursor:pointer;
 }
 
-/**/
+.o9{
+position: absolute;
+top: 652px;
+left: 48px;
+height: 160px;
+opacity:0;
+cursor:pointer;
+}
+/*
+.o10{
+position: absolute;
+top: 652px;
+left: 228px;
+height: 160px;
+opacity:0;
+cursor:pointer;
+}
+
+.o11{
+position: absolute;
+top: 652px;
+left: 408.5px;
+height: 160px;
+opacity:0;
+cursor:pointer;
+}
+
+.o12{
+position: absolute;
+top: 652px;
+left: 589px;
+height: 160px;
+opacity:0;
+cursor:pointer;
+}
+*/
