@@ -1317,7 +1317,7 @@ cursor:pointer;
 
 .o5{
 position: absolute;
-top: 446px;
+top: 446.5px;
 left: 21px;
 height: 160px;
 opacity:0;
@@ -1326,7 +1326,7 @@ cursor:pointer;
 
 .o6{
 position: absolute;
-top: 446px;
+top: 446.5px;
 left: 216px;
 height: 160px;
 opacity:0;
@@ -1335,8 +1335,8 @@ cursor:pointer;
 
 .o7{
 position: absolute;
-top: 446px;
-left: 408.5px;
+top: 446.5px;
+left: 408px;
 height: 160px;
 opacity:0;
 cursor:pointer;
@@ -1344,7 +1344,7 @@ cursor:pointer;
 
 .o8{
 position: absolute;
-top: 446px;
+top: 446.5px;
 left: 589px;
 height: 160px;
 opacity:0;
@@ -1372,7 +1372,7 @@ cursor:pointer;
 .o11{
 position: absolute;
 top: 652px;
-left: 407.7px;
+left: 407.2px;
 height: 160px;
 opacity:0;
 cursor:pointer;
