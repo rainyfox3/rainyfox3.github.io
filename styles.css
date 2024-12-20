@@ -1461,3 +1461,12 @@ cursor:pointer;
 /*
 
 */
+
+
+.mop{
+position: absolute;
+top: 0px;
+left: 0px;
+width: 800px;
+opacity:.1;
+}
