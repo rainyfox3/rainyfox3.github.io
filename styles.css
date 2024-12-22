@@ -1462,12 +1462,31 @@ cursor:pointer;
 .o21{
 position: absolute;
 top: 1265.49px;
-left: 47.9px;
+left: 48.5px;
 height: 214.5px;
 opacity:0;
 cursor:pointer;
 }
+
+.o22{
+position: absolute;
+top: 1265.49px;
+left: 290.9px;
+height: 214.3px;
+width: 215px;
+opacity:0;
+cursor:pointer;
+}
 /*
+.o23{
+position: absolute;
+top: 1265.49px;
+left: 533.9px;
+height: 214.5px;
+opacity:0;
+cursor:pointer;
+}
+
 
 */
 
