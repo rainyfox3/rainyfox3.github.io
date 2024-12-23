@@ -1481,7 +1481,7 @@ cursor: pointer;
 .o23{
 position: absolute;
 top: 1265.2px;
-left: 533.5px;
+left: 533.0px;
 height: 214.5px;
 opacity:0;
 cursor:pointer;
@@ -1497,17 +1497,4 @@ top: 0px;
 left: 0px;
 width: 800px;
 opacity:.5;
-}
-
-
-/*
-*/
-
-
-.mop{
-position: absolute;
-top: 0px;
-left: 0px;
-width: 800px;
-opacity:.2;
 }
