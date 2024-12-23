@@ -1461,8 +1461,8 @@ cursor:pointer;
 
 .o21{
 position: absolute;
-top: 1265.49px;
-left: 48.5px;
+top: 1265.2px;
+left: 48.0px;
 height: 214.5px;
 opacity:0;
 cursor:pointer;
@@ -1470,9 +1470,9 @@ cursor:pointer;
 
 .o22{
 position: absolute;
-top: 1265.49px;
+top: 1265.2px;
 left: 290.5px;
-height: 214.3px;
+height: 214.5px;
 width: 214.8px;
 opacity: 0;
 cursor: pointer;
@@ -1480,12 +1480,25 @@ cursor: pointer;
 
 .o23{
 position: absolute;
-top: 1265.49px;
-left: 533.9px;
+top: 1265.2px;
+left: 533.5px;
 height: 214.5px;
 opacity:0;
 cursor:pointer;
 }
+
+/*
+*/
+
+
+.mop{
+position: absolute;
+top: 0px;
+left: 0px;
+width: 800px;
+opacity:.5;
+}
+
 
 /*
 */
