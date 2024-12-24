@@ -54,7 +54,8 @@ const o24Image = images[23];
 o24Image.addEventListener('mouseover', (event) => {
   if (o24State === 1 || o24State === 2) { // Show popup only for 241.png and 242.png
     popup.style.display = 'block';
-    popup.style.left = event.clientX + 10 + 'px';
+    // Position popup relative to the mouse cursor
+    popup.style.left = event.clientX + 10 + 'px'; 
     popup.style.top = event.clientY - 10 + 'px'; 
   }
 });
