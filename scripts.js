@@ -34,9 +34,9 @@ images.forEach(image => {
 
 // Apply initial image source for o24 based on state
 if (o24State === 1) {
-  images[23].src = 'your-new-image-source-1.jpg'; // Assuming o24 is the 24th image in the array
+  images[23].src = "242.png"; // Assuming o24 is the 24th image in the array
 } else if (o24State === 2) {
-  images[23].src = 'your-new-image-source-2.jpg'; // Assuming o24 is the 24th image in the array
+  images[23].src = "243.png"; // Assuming o24 is the 24th image in the array
 }
 
 // Add click event listeners
@@ -49,11 +49,11 @@ images.forEach(image => {
           o24State = 1;
           break;
         case 1:
-          image.src = 'your-new-image-source-1.jpg';
+          image.src = "242.png";
           o24State = 2;
           break;
         case 2:
-          image.src = 'your-new-image-source-2.jpg';
+          image.src = "243.png";
           o24State = 3;
           break;
         case 3:
