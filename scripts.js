@@ -41,48 +41,27 @@ if (o24State === 1) {
   images[23].src = "241.png"; 
 }
 
-// Create a popup element
-const popup = document.createElement('div');
-popup.classList.add('popup');
-popup.textContent = 'Click Again';
-popup.style.display = 'none'; // Initially hide the popup
-
-// Get the o24 element
-const o24Image = images[23];
-
-// Add hover events to o24
-o24Image.addEventListener('mouseover', (event) => {
-  if (o24State === 1 || o24State === 2) { // Show popup only for 241.png and 242.png
-    popup.style.display = 'block';
-    // Position popup relative to the mouse cursor
-    popup.style.left = event.clientX + 10 + 'px'; 
-    popup.style.top = event.clientY - 10 + 'px'; 
-  }
-});
-
-o24Image.addEventListener('mouseout', () => {
-  popup.style.display = 'none';
-});
-
 // Add click event listeners
 images.forEach(image => {
   image.addEventListener('click', () => {
     if (image.classList.contains('o24')) {
       switch (o24State) {
         case 0:
-          image.style.opacity = '1';
+          image.src = "241.png"; 
+          image.style.opacity = '1'; 
           o24State = 1;
           break;
         case 1:
-          image.src = "242.png";
+          image.src = "242.png"; 
           o24State = 2;
           break;
         case 2:
-          image.src = "243.png";
+          image.src = "243.png"; 
           o24State = 3;
           break;
         case 3:
-          image.style.opacity = '0';
+          image.src = "241.png"; 
+          image.style.opacity = '0'; 
           o24State = 0;
           break;
       }
@@ -93,9 +72,6 @@ images.forEach(image => {
     localStorage.setItem('o24State', o24State); // Store o24State in local storage
   });
 });
-
-// Append the popup to the document
-document.body.appendChild(popup);
 
 /*const images = document.querySelectorAll('.o1, .o2, .o3, .o4, .o5, .o6, .o7, .o8, .o9, .o10, .o11, .o12, .o13, .o14, .o15, .o16, .o17, .o18, .o19, .o20, .o21, .o22, .o23, .o24');
 
