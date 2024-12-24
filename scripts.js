@@ -3,26 +3,17 @@ const images = document.querySelectorAll('.o1, .o2, .o3, .o4, .o5, .o6, .o7, .o8
 const defaultOpacity = '0'; // Set the default opacity
 let o24State = parseInt(localStorage.getItem('o24State')) || 0; // Retrieve o24State from local storage
 
-images.forEach(image => {
-  const className = image.className;
-  localStorage.setItem(className, localStorage.getItem(className) || defaultOpacity);
-});
-
-// Apply initial opacity based on local storage
+// Apply initial opacity and source based on local storage
 images.forEach(image => {
   const className = image.className;
   const storedOpacity = localStorage.getItem(className);
-  image.style.opacity = storedOpacity;
-});
+  const storedState = parseInt(localStorage.getItem(`${className}-state`)) || 0; // New line for stored state
 
-// Apply initial image source for o24 based on state
-if (o24State === 1) {
-  images[23].src = "242.png"; 
-} else if (o24State === 2) {
-  images[23].src = "243.png"; 
-} else { 
-  images[23].src = "241.png"; 
-}
+  image.style.opacity = storedOpacity;
+  if (image.classList.contains('o24')) {
+    image.src = `24${storedState + 1}.png`; // Set source based on stored state
+  }
+});
 
 // Add click event listeners
 images.forEach(image => {
@@ -30,21 +21,21 @@ images.forEach(image => {
     if (image.classList.contains('o24')) {
       switch (o24State) {
         case 0:
-          image.src = "241.png"; 
-          image.style.opacity = '1'; 
+          image.src = "241.png";
+          image.style.opacity = '1';
           o24State = 1;
           break;
         case 1:
-          image.src = "242.png"; 
+          image.src = "242.png";
           o24State = 2;
           break;
         case 2:
-          image.src = "243.png"; 
+          image.src = "243.png";
           o24State = 3;
           break;
         case 3:
-          image.src = "241.png"; 
-          image.style.opacity = '0'; 
+          image.src = "241.png";
+          image.style.opacity = '0';
           o24State = 0;
           break;
       }
@@ -52,6 +43,7 @@ images.forEach(image => {
       image.style.opacity = image.style.opacity === '1' ? '0' : '1';
     }
     localStorage.setItem(image.className, image.style.opacity);
-    localStorage.setItem('o24State', o24State); // Store o24State in local storage
+    localStorage.setItem('o24State', o24State); // Store overall state
+    localStorage.setItem(`${image.className}-state`, o24State); // Store current image state
   });
 });
