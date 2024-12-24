@@ -1,3 +1,4 @@
+// e5
 // elephant4
 const images = document.querySelectorAll('.o1, .o2, .o3, .o4, .o5, .o6, .o7, .o8, .o9, .o10, .o11, .o12, .o13, .o14, .o15, .o16, .o17, .o18, .o19, .o20, .o21, .o22, .o23, .o24');
 
@@ -18,11 +19,14 @@ images.forEach(image => {
 
 // Apply initial image source for o24 based on state
 if (o24State === 1) {
-  images[23].src = "242.png"; 
-} else if (o24State === 2) {
-  images[23].src = "243.png"; 
-} else { 
   images[23].src = "241.png"; 
+} else if (o24State === 2) {
+  images[23].src = "242.png"; 
+} else if (o24State === 3) { 
+  images[23].src = "243.png"; 
+} else if (o24State === 0) { 
+  images[23].src = "241.png";
+  image.style.opacity = '0'; 
 }
 
 // Add click event listeners
