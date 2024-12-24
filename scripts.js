@@ -3,17 +3,22 @@ const images = document.querySelectorAll('.o1, .o2, .o3, .o4, .o5, .o6, .o7, .o8
 const defaultOpacity = '0'; // Set the default opacity
 let o24State = parseInt(localStorage.getItem('o24State')) || 0; // Retrieve o24State from local storage
 
-// Apply initial opacity and source based on local storage
+// Apply initial opacity based on local storage
 images.forEach(image => {
   const className = image.className;
   const storedOpacity = localStorage.getItem(className);
-  const storedState = parseInt(localStorage.getItem(`${className}-state`)) || 0; // New line for stored state
 
   image.style.opacity = storedOpacity;
-  if (image.classList.contains('o24')) {
-    image.src = `24${storedState + 1}.png`; // Set source based on stored state
-  }
 });
+
+// Apply initial source for o24 based on state (optimized)
+if (o24State === 0) {
+  image.src = "241.png";
+} else if (o24State === 1) {
+  image.src = "242.png";
+} else if (o24State === 2) {
+  image.src = "243.png";
+}
 
 // Add click event listeners
 images.forEach(image => {
@@ -44,6 +49,5 @@ images.forEach(image => {
     }
     localStorage.setItem(image.className, image.style.opacity);
     localStorage.setItem('o24State', o24State); // Store overall state
-    localStorage.setItem(`${image.className}-state`, o24State); // Store current image state
   });
 });
