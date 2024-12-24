@@ -49,9 +49,11 @@ popup.style.display = 'none'; // Initially hide the popup
 const o24Image = images[23];
 
 // Add hover events to o24
-o24Image.addEventListener('mouseover', () => {
+o24Image.addEventListener('mouseover', (event) => {
   if (o24State > 0) { // Show popup only after the first click
     popup.style.display = 'block';
+    popup.style.left = event.clientX + 10 + 'px'; // Position popup to the right of the mouse
+    popup.style.top = event.clientY - 10 + 'px'; 
   }
 });
 
@@ -88,9 +90,6 @@ images.forEach(image => {
     localStorage.setItem('o24State', o24State); // Store o24State in local storage
   });
 });
-
-// Append the popup to the document
-document.body.appendChild(popup);
 
 /*const images = document.querySelectorAll('.o1, .o2, .o3, .o4, .o5, .o6, .o7, .o8, .o9, .o10, .o11, .o12, .o13, .o14, .o15, .o16, .o17, .o18, .o19, .o20, .o21, .o22, .o23, .o24');
 
