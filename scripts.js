@@ -34,9 +34,11 @@ images.forEach(image => {
 
 // Apply initial image source for o24 based on state
 if (o24State === 1) {
-  images[23].src = "242.png"; // Assuming o24 is the 24th image in the array
+  images[23].src = "242.png"; 
 } else if (o24State === 2) {
-  images[23].src = "243.png"; // Assuming o24 is the 24th image in the array
+  images[23].src = "243.png"; 
+} else { 
+  images[23].src = "241.png"; 
 }
 
 // Create a popup element
@@ -50,9 +52,9 @@ const o24Image = images[23];
 
 // Add hover events to o24
 o24Image.addEventListener('mouseover', (event) => {
-  if (o24State > 0) { // Show popup only after the first click
+  if (o24State === 1 || o24State === 2) { // Show popup only for 241.png and 242.png
     popup.style.display = 'block';
-    popup.style.left = event.clientX + 10 + 'px'; // Position popup to the right of the mouse
+    popup.style.left = event.clientX + 10 + 'px';
     popup.style.top = event.clientY - 10 + 'px'; 
   }
 });
@@ -69,7 +71,6 @@ images.forEach(image => {
         case 0:
           image.style.opacity = '1';
           o24State = 1;
-          image.src = "241.png"; // Reset image source to 241.png after opacity is 0
           break;
         case 1:
           image.src = "242.png";
@@ -81,8 +82,8 @@ images.forEach(image => {
           break;
         case 3:
           image.style.opacity = '0';
-          o24State = 0; 
-          break; 
+          o24State = 0;
+          break;
       }
     } else {
       image.style.opacity = image.style.opacity === '1' ? '0' : '1';
