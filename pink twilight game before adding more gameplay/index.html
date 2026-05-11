@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Pink Twilight</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:,">
+</head>
+
+<body>
+
+  <div class="vignette"></div>
+
+  <div id="ui">
+    <h2 class="text-xl font-light tracking-tighter"></h2>
+   <!-- <p class="text-xs italic opacity-70">
+      WASD to wander • SPACE to jump • R to collect • U to cycle items
+    </p>-->
+<details class="controls-menu group select-none pointer-events-auto flex items-center relative overflow-visible">
+  <summary class="menu-button">
+  <div class="hamburger">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
+</summary>
+
+  <div class="menu-content">
+      <p class="control-tag">[WASD / ⇦⇳⇨] Move</p>
+      <p class="control-tag">[SPACE] Jump</p>
+      <p class="control-tag">[R] Collect</p>
+      <p class="control-tag">[I] Inventory</p>
+      <p class="control-tag">[C] Craft</p>
+  </div>
+</details>
+  </div>
+
+  <div id="collect-prompt">COLLECT SPIRIT ORB [R]</div>
+
+  <div id="inventory-ui" class="hidden-ui">
+    <div class="text-xs uppercase tracking-widest opacity-60 mb-1">Inventory</div>
+    <div class="text-md font-bold mb-2"><span id="essence-count">0</span> Essence</div>
+    <div id="item-list" class="max-h-40 overflow-y-auto">
+      <p class="text-[10px] opacity-40">No artifacts found.</p>
+    </div>
+  </div>
+
+  <div id="crafting-panel" class="hidden-ui">
+    <div class="text-xs uppercase tracking-widest opacity-60 mb-1">Workshop</div>
+    <div class="text-md font-bold mb-1">Transmutation</div>
+    <input type="text" id="craft-input" placeholder="A star-glass lantern..." />
+    <button id="craft-button">Craft</button>
+    <div id="craft-log" class="text-[9px] opacity-50 mt-1 italic max-h-12 overflow-y-auto"></div>
+  </div>
+
+  <canvas id="gameCanvas"></canvas>
+
+  <!-- Load order matters: constants and state first, then systems, then bootstrap -->
+  <script type="module" src="js/main.js"></script>
+
+</body>
+</html>
